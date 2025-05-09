@@ -168,6 +168,7 @@
 
   a {
     color: var(--text-high-contrast);
+    text-decoration: none;
   }
 
   a:hover,
