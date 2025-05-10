@@ -259,6 +259,11 @@
       border-radius: 0;
     }
   }
+
+  [aria-controls="primary-nav"] {
+    display: none;
+  }
+
   .primary-navigation {
     ul {
       display: flex;
@@ -274,6 +279,8 @@
     }
 
     @media (width < 760px) {
+      display: none;
+
       position: absolute;
       z-index: 10;
       top: 0;
@@ -295,6 +302,16 @@
         padding-block-start: 1.5rem;
         border-top: 2px solid var(--background-accent-light);
       }
+    }
+  }
+
+  @media (width < 760px) {
+    [aria-controls="primary-nav"] {
+      display: block;
+    }
+
+    [aria-expanded="true"] + .primary-navigation {
+      display: block;
     }
   }
 
