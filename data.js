@@ -50,7 +50,7 @@ const mushrooms = [
   {
     'name': 'Destroying Angel',
     'type': 'toxic',
-    'season': 'summer',
+    'season': 'fall',
     'description': 'Pure white mushroom with a sack-like base',
     'notesTitle': 'Safety warning',
     'notes': 'Deadly toxic - study for safety awareness',
@@ -109,6 +109,7 @@ function createMushroomCardElement (data) {
   cardHeaderElement.textContent = data.name
 
   const cardFiltersListElement = document.createElement('ul')
+  cardFiltersListElement.classList.add('tag-list')
   cardFiltersListElement.setAttribute('role', 'list')
   mushroomFilters
     .map((filter) => {
