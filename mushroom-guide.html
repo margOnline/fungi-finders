@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="/main.js" defer></script>
+    <script src="/data.js" defer></script>
   </head>
   <body>
     <a class="skip-to-main" href="#main">Skip to main content</a>
@@ -109,7 +110,28 @@
             <option value="Toxic">Type: Toxic</option>
           </select>
           <!-- grid of mushrooms -->
-          <div><!-- 12 cards --></div>
+          <div id="mushrooms-grid">
+            <div class="card">
+              <h3 class="card__title">Chanterelle</h3>
+              <ul role="list" aria-label="Mushroom characteristics">
+                <li data-edible="edible">
+                  <span class="visually-hidden">This mushroom is</span>
+                  Edible
+                </li>
+                <li data-season="summer">
+                  <span class="visually-hidden">
+                    Best season to harvest this mushroom is
+                  </span>
+                  summer
+                </li>
+              </ul>
+              <p>Golden-yellow, funnel-shaped mushroom with false gills</p>
+              <div class="card__note">
+                <strong>Important notes: </strong>Has toxic look-alikes - learn
+                proper identification
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
