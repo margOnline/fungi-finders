@@ -400,10 +400,10 @@
       border-radius: var(--border-radius-1);
     }
 
-    [data-type="edible"] {
+    [data-edible="edible"] {
       background-color: var(--background-accent-main);
     }
-    [data-type="toxic"] {
+    [data-edible="toxic"] {
       background-color: var(--clr-red-500)
     }
     [data-season="summer"] {
@@ -463,6 +463,9 @@
 }
 
 @layer utilities {
+  [hidden] {
+    display: none;
+  }
   .text-center {
     text-align: center;
   }

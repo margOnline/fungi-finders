@@ -1,7 +1,7 @@
 const mushrooms = [
   {
     'name': 'Chanterelle',
-    'type': 'edible',
+    'edible': 'edible',
     'season': 'summer',
     'description': 'Golden-yellow, funnel-shaped mushroom with false gills',
     'notesTitle': 'Important notes',
@@ -9,7 +9,7 @@ const mushrooms = [
   },
   {
     'name': 'Morel',
-    'type': 'toxic',
+    'edible': 'toxic',
     'season': 'spring',
     'description': 'Distinctive honeycomb-like cap structure',
     'notesTitle': 'Important notes',
@@ -17,7 +17,7 @@ const mushrooms = [
   },
   {
     'name': 'Chicken of the Woods',
-    'type': 'edible',
+    'edible': 'edible',
     'season': 'summer',
     'description': 'Bright orange bracket fungus with yellow edges',
     'notesTitle': 'Important notes',
@@ -25,7 +25,7 @@ const mushrooms = [
   },
   {
     'name': 'Death Cap',
-    'type': 'toxic',
+    'edible': 'toxic',
     'season': 'summer',
     'description': 'Pale green to white cap with white gills',
     'notesTitle': 'Important notes',
@@ -33,7 +33,7 @@ const mushrooms = [
   },
   {
     'name': "Lion's Mane",
-    'type': 'edible',
+    'edible': 'edible',
     'season': 'fall',
     'description': "White, shaggy appearance like a lion's mane",
     'notesTitle': 'Safety warning',
@@ -41,7 +41,7 @@ const mushrooms = [
   },
   {
     'name': 'Oyster Mushroom',
-    'type': 'edible',
+    'edible': 'edible',
     'season': 'fall',
     'description': 'Fan-shaped caps growing in clusters',
     'notesTitle': 'Safety warning',
@@ -49,7 +49,7 @@ const mushrooms = [
   },
   {
     'name': 'Destroying Angel',
-    'type': 'toxic',
+    'edible': 'toxic',
     'season': 'fall',
     'description': 'Pure white mushroom with a sack-like base',
     'notesTitle': 'Safety warning',
@@ -57,7 +57,7 @@ const mushrooms = [
   },
   {
     'name': 'King Bolete',
-    'type': 'edible',
+    'edible': 'edible',
     'season': 'summer',
     'description': 'Large brown cap with thick stem',
     'notesTitle': 'Safety warning',
@@ -65,15 +65,15 @@ const mushrooms = [
   },
   {
     'name': 'Shaggy Mane',
-    'type': 'edible',
+    'edible': 'edible',
     'season': 'fall',
-    'description': 'Golden-yellow, funnel-shaped mushroom with flase gills',
+    'description': 'Golden-yellow, funnel-shaped mushroom with shaggy scales',
     'notesTitle': 'Safety warning',
     'notes': 'Must be harvested and eaten quickly',
   },
   {
     'name': 'Maitake',
-    'type': 'edible',
+    'edible': 'edible',
     'season': 'fall',
     'description': 'Large, feathery clusters with overlapping gray-brown caps',
     'notesTitle': 'Safety warning',
@@ -81,7 +81,7 @@ const mushrooms = [
   },
   {
     'name': 'False Morel',
-    'type': 'toxic',
+    'edible': 'toxic',
     'season': 'spring',
     'description': 'Brain-like, reddish-brown cap with irregular shape',
     'notesTitle': 'Safety warning',
@@ -89,7 +89,7 @@ const mushrooms = [
   },
   {
     'name': 'Matsutake',
-    'type': 'edible',
+    'edible': 'edible',
     'season': 'fall',
     'description': 
       'White to brown cap with thick stem and distinct spicy aroma',
@@ -97,7 +97,7 @@ const mushrooms = [
     'notes': 'Verify identification - has toxic look-alikes',
   },
 ]
-const mushroomFilters = ['type', 'season']
+const mushroomFilters = ['edible', 'season']
 
 function createMushroomCardElement (data) {
   // create the markup for the mushroom card
