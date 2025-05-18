@@ -91,7 +91,7 @@ const mushrooms = [
     'name': 'Matsutake',
     'edible': 'edible',
     'season': 'fall',
-    'description': 
+    'description':
       'White to brown cap with thick stem and distinct spicy aroma',
     'notesTitle': 'Safety warning',
     'notes': 'Verify identification - has toxic look-alikes',
@@ -99,7 +99,7 @@ const mushrooms = [
 ]
 const mushroomFilters = ['edible', 'season']
 
-function createMushroomCardElement (data) {
+function createMushroomCardElement(data) {
   // create the markup for the mushroom card
   const mushroomCardElement = document.createElement('div')
   mushroomCardElement.classList.add('card')
@@ -117,8 +117,9 @@ function createMushroomCardElement (data) {
       listOption.setAttribute(`data-${filter}`, data[filter])
       listOption.textContent = capitalize(data[filter])
       return listOption
-    }).forEach((listOption) => cardFiltersListElement.appendChild(listOption))
-  
+    })
+    .forEach((listOption) => cardFiltersListElement.appendChild(listOption))
+
   const cardDescriptionElement = document.createElement('p')
   cardDescriptionElement.textContent = data.description
 
@@ -131,17 +132,17 @@ function createMushroomCardElement (data) {
   cardNoteElement.appendChild(noteTitleElement)
   cardNoteElement.appendChild(noteElement)
 
-  
+  Array.from([
+    cardHeaderElement,
+    cardFiltersListElement,
+    cardDescriptionElement,
+    cardNoteElement,
+  ]).forEach((elem) => mushroomCardElement.appendChild(elem))
 
-  // append all the child elements to the parent element
-  mushroomCardElement.appendChild(cardHeaderElement)
-  mushroomCardElement.appendChild(cardFiltersListElement)
-  mushroomCardElement.appendChild(cardDescriptionElement)
-  mushroomCardElement.appendChild(cardNoteElement)
   return mushroomCardElement
 }
 
-function renderMushroomCards (data) {
+function renderMushroomCards(data) {
   const mushroomsContainer = document.querySelector('#mushrooms-grid')
   mushrooms.forEach((mushroom) => {
     const mushroomCardContainer = createMushroomCardElement(mushroom)
