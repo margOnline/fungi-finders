@@ -203,12 +203,12 @@
     gap: var(--grid-flow-gap, 1rem);
   }
 
-  .grid-auto-fit {
+  .grid-auto-fill {
     --auto-fit-min-col-size: 250px;
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(
-      auto-fit,
+      auto-fill,
       minmax(min(var(--auto-fit-min-col-size), 100%), 1fr)
     );
   }
@@ -527,6 +527,10 @@
     border: 0;
     border-radius: var(--border-radius-2);
     color: var(--text-high-contrast);
+  }
+  .no-matches {
+    color: var(--text-high-contrast);
+    margin-inline-start: 1rem;
   }
 }
 

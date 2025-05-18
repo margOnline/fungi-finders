@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="/main.js" defer></script>
     <script src="/data.js" defer></script>
+    <script src="/mushroom-filter.js" defer></script>
   </head>
   <body>
     <a class="skip-to-main" href="#main">Skip to main content</a>
@@ -112,32 +113,12 @@
               <select name="edible" id="edible">
                 <option value="all">Type: All</option>
                 <option value="edible">Type: Edible</option>
-                <option value="Toxic">Type: Toxic</option>
+                <option value="toxic">Type: Toxic</option>
               </select>
             </div>
             <!-- grid of mushrooms -->
-            <div id="mushrooms-grid" class="grid-auto-fit">
-              <div class="card">
-                <h3 class="card__title">Chanterelle</h3>
-                <ul role="list" aria-label="Mushroom characteristics">
-                  <li data-edible="edible">
-                    <span class="visually-hidden">This mushroom is</span>
-                    Edible
-                  </li>
-                  <li data-season="summer">
-                    <span class="visually-hidden">
-                      Best season to harvest this mushroom is
-                    </span>
-                    summer
-                  </li>
-                </ul>
-                <p>Golden-yellow, funnel-shaped mushroom with false gills</p>
-                <div class="card__note">
-                  <strong>Important notes: </strong>Has toxic look-alikes -
-                  learn proper identification
-                </div>
-              </div>
-            </div>
+            <div id="mushrooms-grid" class="grid-auto-fill"></div>
+            <div class="no-matches" hidden>No matches</div>
           </div>
         </div>
       </section>
