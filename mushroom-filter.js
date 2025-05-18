@@ -40,3 +40,10 @@ function filterCards() {
     noResultsMessage.hidden = hasMatches
   })
 }
+
+function enableFiltering() {
+  seasonalFilter.hidden = false
+  edibleFilter.hidden = false
+}
+
+enableFiltering()
