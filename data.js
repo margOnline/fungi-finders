@@ -99,10 +99,11 @@ const mushrooms = [
 ]
 const mushroomFilters = ['edible', 'season']
 
-function createMushroomCardElement(data) {
+function createMushroomCardElement(data, cardId) {
   // create the markup for the mushroom card
   const mushroomCardElement = document.createElement('div')
   mushroomCardElement.classList.add('card')
+  mushroomCardElement.style.viewTransitionName = `mushroom-card-${cardId}`
 
   const cardHeaderElement = document.createElement('h3')
   cardHeaderElement.classList.add('card__title')
@@ -144,8 +145,8 @@ function createMushroomCardElement(data) {
 
 function renderMushroomCards(data) {
   const mushroomsContainer = document.querySelector('#mushrooms-grid')
-  mushrooms.forEach((mushroom) => {
-    const mushroomCardContainer = createMushroomCardElement(mushroom)
+  mushrooms.forEach((mushroom, index) => {
+    const mushroomCardContainer = createMushroomCardElement(mushroom, index + 1)
     mushroomsContainer.appendChild(mushroomCardContainer)
   })
 }
