@@ -14,7 +14,13 @@ edibleFilter.addEventListener('change', updateFilter)
 function updateFilter(event) {
   const filterType = event.target.name
   currentFilters[filterType] = event.target.value
-  filterCards()
+
+  if (!document.startViewTransition) {
+    filterCards()
+    return
+  }
+
+  document.startViewTransition(() => filterCards())
 }
 
 function filterCards() {
